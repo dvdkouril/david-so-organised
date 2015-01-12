@@ -1,9 +1,9 @@
 <head>
-  <title>dso-app</title>
+  <title>David So Organised.</title>
 </head>
 
 <body>
-  <h1>Welcome to Meteor!</h1>
+  {{> date}}
 
   {{> hello}}
 </body>
@@ -11,4 +11,8 @@
 <template name="hello">
   <button>Click Me</button>
   <p>You've pressed the button {{counter}} times.</p>
+</template>
+
+<template name="date">
+  <h1>12. ledna 2015 - {{day}}</h1>
 </template>
