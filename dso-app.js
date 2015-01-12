@@ -2,7 +2,7 @@ if (Meteor.isClient) {
   // counter starts at 0
     Session.setDefault("counter", 0);
     Session.setDefault("day", "nothing");
-    Session.set("day", moment().format('LLLL'));
+    Session.set("day", moment().format('MMM Do YYY'));
 
   Template.hello.helpers({
     counter: function () {
@@ -13,10 +13,6 @@ if (Meteor.isClient) {
 	day: function () {
 	    return Session.get("day");
 	}
-    });
-
-    Tracker.autorun(function () {
-	Session.set("day", moment().format('LLLL'));
     });
 
   Template.hello.events({
